@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+
+<div class="banner">
+    <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* BANNER */
+.banner{
+position:relative;
+height:50vh;
+background:url('imgs/interia3.jpg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+
+/* DARK PREMIUM OVERLAY */
+.banner::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(
+to right,
+rgba(0,0,0,0.7),
+rgba(0,0,0,0.4),
+rgba(0,0,0,0.7)
+);
+}
+
+/* SUBTLE LINE PATTERN */
+.banner::after{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:repeating-linear-gradient(
+90deg,
+rgba(255,255,255,0.05) 0px,
+rgba(255,255,255,0.05) 1px,
+transparent 1px,
+transparent 80px
+);
+opacity:0.3;
+}
+
+/* CONTENT */
+.content{
+position:relative;
+text-align:center;
+color:#fff;
+}
+
+/* SMALL LABEL */
+.content span{
+display:block;
+font-size:12px;
+letter-spacing:4px;
+opacity:0.7;
+margin-bottom:10px;
+}
+
+/* MAIN HEADING */
+.content h1{
+font-size:64px;
+letter-spacing:8px;
+font-weight:300;
+}
+
+/* DECORATIVE LINE */
+.line{
+width:80px;
+height:2px;
+background:#fff;
+margin:20px auto 0;
+opacity:0.8;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.content h1{
+font-size:40px;
+}
+}
+
+</style>
+  <div class="content">
+    <span>WELCOME TO OUR COMPANY</span>
+    <h1>ABOUT US</h1>
+    <div class="line"></div>
+  </div>
+</div>
+
+<section class="about-text">
+    <style>
+
+/* ABOUT TEXT SECTION */
+.about-text{
+padding:80px 20px;
+background:#f9f9f9;
+display:flex;
+justify-content:center;
+}
+
+/* PARAGRAPH */
+.about-text p{
+max-width:700px;
+text-align:center;
+font-size:16px;
+line-height:1.9;
+color:#444;
+font-weight:300;
+letter-spacing:0.5px;
+position:relative;
+}
+
+/* DECORATIVE LINE TOP */
+.about-text p::before{
+content:'';
+position:absolute;
+top:-25px;
+left:50%;
+transform:translateX(-50%);
+width:60px;
+height:2px;
+background:#caa56a; /* premium gold */
+}
+
+/* DECORATIVE LINE BOTTOM */
+.about-text p::after{
+content:'';
+position:absolute;
+bottom:-25px;
+left:50%;
+transform:translateX(-50%);
+width:40px;
+height:2px;
+background:#caa56a;
+opacity:0.7;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.about-text{
+padding:60px 15px;
+}
+.about-text p{
+font-size:14px;
+}
+}
+
+</style>
+  <p>
+    We craft timeless interiors that blend elegance with functionality. 
+    Every space we design reflects a balance of creativity, precision, 
+    and refined aesthetics—transforming ordinary environments into 
+    extraordinary experiences that inspire and endure.
+    We craft timeless interiors that blend elegance with functionality. 
+    Every space we design reflects a balance of creativity, precision, 
+   
+  </p>
+  
+</section>
+
+<section class="about-section">
+
+<style>
+.about-section *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+.about-section{
+font-family:'Poppins',sans-serif;
+position:relative;
+overflow:hidden;
+background:#1a120e;
+padding:80px 0;
+display:flex;
+justify-content:center;
+}
+
+/* LEFT TEXTURE */
+.about-section::before{
+content:'';
+position:absolute;
+left:0;
+top:0;
+width:50%;
+height:100%;
+background:repeating-linear-gradient(
+90deg,
+#2c1e17 0px,
+#2c1e17 3px,
+#1a120e 3px,
+#1a120e 7px
+);
+z-index:0;
+}
+
+/* RIGHT CLEAN BG */
+.about-section::after{
+content:'';
+position:absolute;
+right:0;
+top:0;
+width:50%;
+height:100%;
+background:#1a120e;
+z-index:0;
+}
+
+/* WRAPPER */
+.about-section .wrapper{
+width:80%;
+max-width:1200px;
+position:relative;
+z-index:1;
+}
+
+/* CARD */
+.about-section .container{
+display:flex;
+height:630px;
+background:transparent;
+box-shadow:0 40px 100px rgba(0,0,0,0.8);
+transition:0.4s ease;
+}
+
+/* LEFT PANEL */
+.about-section .left{
+width:35%;
+background:#2a1d16;
+padding:40px 35px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+/* LOGO */
+.about-section .logo{
+font-family:'Playfair Display',serif;
+font-size:34px;
+color:#caa56a;
+letter-spacing:3px;
+text-align:center;
+margin-bottom:5px;
+}
+
+.about-section .sub{
+font-size:12px;
+letter-spacing:4px;
+text-align:center;
+margin-bottom:25px;
+color:#aaa;
+}
+
+/* TEXT */
+.about-section .section-title{
+font-size:13px;
+color:#caa56a;
+letter-spacing:1px;
+margin-top:10px;
+margin-bottom:6px;
+}
+
+.about-section .left p{
+font-size:13px;
+line-height:1.7;
+color:#ddd;
+margin-bottom:10px;
+}
+
+.about-section .website{
+margin-top:15px;
+font-size:12px;
+color:#aaa;
+text-align:center;
+}
+
+/* RIGHT IMAGE */
+.about-section .right{
+width:65%;
+background:url('imgs/interia2.jpg') center/cover no-repeat;
+position:relative;
+}
+
+.about-section .right::after{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(to right, rgba(0,0,0,0.25), transparent);
+}
+
+/* HOVER */
+.about-section .container:hover{
+transform:scale(1.02);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.about-section .wrapper{
+width:95%;
+}
+.about-section .container{
+flex-direction:column;
+height:auto;
+}
+.about-section .left,
+.about-section .right{
+width:100%;
+}
+.about-section .right{
+height:280px;
+}
+}
+</style>
+
+<div class="wrapper">
+  <div class="container">
+
+    <!-- LEFT -->
+    <div class="left">
+      <div class="logo">INTERIO</div>
+      <div class="sub">DESIGNS</div>
+
+      <div class="section-title">VISION</div>
+      <p>
+        To redefine modern living by creating sophisticated, sustainable, and inspiring spaces that elevate everyday life.
+      </p>
+
+      <div class="section-title">MISSION</div>
+      <p>
+        Deliver innovative and high-quality design solutions that merge creativity with precision, ensuring elegance and excellence.
+      </p>
+
+      <div class="website">artovadesign.com</div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right"></div>
+
+  </div>
+</div>
+
+</section>
+
+
+<section class="core-values-section">
+
+<style>
+.core-values-section *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+.core-values-section{
+font-family:'Poppins',sans-serif;
+background:#d1d0d0;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:80px 0;
+}
+
+/* MAIN */
+.core-values-section .wrapper{
+width:90%;
+max-width:1300px;
+height:85vh;
+display:flex;
+background:#fff;
+overflow:hidden;
+}
+
+/* LEFT */
+.core-values-section .left{
+width:30%;
+background:#f3f5f6;
+padding:90px 60px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.core-values-section .left h1{
+font-size:64px;
+letter-spacing:10px;
+color:#1f4b67;
+font-weight:300;
+line-height:1.2;
+}
+
+.core-values-section .line{
+width:120px;
+height:2px;
+background:#1f4b67;
+margin:30px 0;
+}
+
+.core-values-section .left p{
+font-size:14px;
+color:#6b7c87;
+}
+
+/* RIGHT GRID */
+.core-values-section .right{
+width:70%;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+grid-template-rows:repeat(2,1fr);
+}
+
+/* CARD */
+.core-values-section .card{
+position:relative;
+overflow:hidden;
+}
+
+/* IMAGE */
+.core-values-section .card img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* OVERLAY */
+.core-values-section .card::after{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+}
+
+/* CONTENT */
+.core-values-section .content{
+position:absolute;
+top:25px;
+right:25px;
+text-align:right;
+color:#fff;
+z-index:2;
+}
+
+/* ICON */
+.core-values-section .icon svg{
+width:28px;
+height:28px;
+stroke:#fff;
+stroke-width:1.5;
+}
+
+/* LINE */
+.core-values-section .divider{
+width:40px;
+height:2px;
+background:#fff;
+margin:10px 0 12px auto;
+opacity:0.8;
+}
+
+/* TEXT */
+.core-values-section .content h3{
+font-size:13px;
+letter-spacing:2px;
+font-weight:500;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.core-values-section .wrapper{
+flex-direction:column;
+height:auto;
+}
+.core-values-section .left,
+.core-values-section .right{
+width:100%;
+}
+.core-values-section .right{
+grid-template-columns:repeat(2,1fr);
+}
+}
+</style>
+
+<div class="wrapper">
+
+  <!-- LEFT -->
+  <div class="left">
+    <h1>CORE<br>VALUES</h1>
+    <div class="line"></div>
+    <p>Built with Passion, Finished with Perfection</p>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+
+    <div class="card">
+      <img src="imgs/interia1.jpg">
+      <div class="content">
+        <div class="icon"><i data-feather="cpu"></i></div>
+        <div class="divider"></div>
+        <h3>CREATIVITY</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="imgs/interia2.jpg">
+      <div class="content">
+        <div class="icon"><i data-feather="settings"></i></div>
+        <div class="divider"></div>
+        <h3>QUALITY</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="imgs/interia3.jpg">
+      <div class="content">
+        <div class="icon"><i data-feather="shield"></i></div>
+        <div class="divider"></div>
+        <h3>INTEGRITY</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="imgs/interia4.jpg">
+      <div class="content">
+        <div class="icon"><i data-feather="users"></i></div>
+        <div class="divider"></div>
+        <h3>CUSTOMER<br>FOCUS</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="imgs/interia5.jpg">
+      <div class="content">
+        <div class="icon"><i data-feather="eye"></i></div>
+        <div class="divider"></div>
+        <h3>ATTENTION TO<br>DETAIL</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="imgs/herobgim.jpg">
+      <div class="content">
+        <div class="icon"><i data-feather="clock"></i></div>
+        <div class="divider"></div>
+        <h3>TIMELY<br>DELIVERY</h3>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+feather.replace();
+</script>
+
+</section>
+
+
+
+<section class="faq-section">
+
+<style>
+.faq-section *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI", sans-serif;
+}
+
+/* SECTION BACKGROUND */
+.faq-section{
+display:flex;
+align-items:center;
+justify-content:center;
+padding:80px 20px;
+background: radial-gradient(circle at top, #0d1f1c, #030807);
+color:#fff;
+}
+
+/* CONTAINER */
+.faq-section .container{
+width:1250px;
+padding:50px 60px;
+border-radius:2px;
+background: linear-gradient(135deg, rgba(0,80,60,0.35), rgba(0,0,0,0.85));
+box-shadow: 0 25px 80px rgba(0,0,0,0.7);
+border:1px solid rgba(255,255,255,0.06);
+backdrop-filter: blur(10px);
+}
+
+/* TAG */
+.faq-section .tag{
+display:inline-block;
+padding:6px 14px;
+font-size:12px;
+border-radius:2px;
+background:rgba(255,255,255,0.1);
+margin-bottom:20px;
+}
+
+/* TITLE */
+.faq-section h1{
+font-size:28px;
+text-align:center;
+line-height:1.4;
+margin-bottom:40px;
+font-weight:300;
+}
+
+/* FAQ */
+.faq-section .faq{
+display:flex;
+align-items:flex-start;
+gap:15px;
+margin-bottom:20px;
+}
+
+/* LEFT ICON */
+.faq-section .icon{
+min-width:40px;
+height:40px;
+border-radius:50%;
+background:rgba(255,255,255,0.08);
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+color:#cfcfcf;
+transition:0.3s;
+}
+
+.faq-section .faq:hover .icon{
+background:rgba(0,255,150,0.15);
+color:#00ffae;
+}
+
+/* CONTENT */
+.faq-section .content{
+flex:1;
+}
+
+/* QUESTION */
+.faq-section .question{
+background: linear-gradient(90deg, #0c3b2f, #08251f);
+padding:14px 20px;
+border-radius:3px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.faq-section .faq:hover .question{
+background: linear-gradient(90deg, #115c48, #0a2f27);
+box-shadow: 0 4px 20px rgba(0,255,150,0.08);
+}
+
+/* ANSWER */
+.faq-section .answer{
+margin-top:0;
+background: linear-gradient(135deg, rgba(10,45,36,0.9), rgba(6,27,22,0.9));
+border-radius:2px;
+font-size:14px;
+color:#d6d6d6;
+
+max-height:0;
+overflow:hidden;
+padding:0 20px;
+
+opacity:0;
+transform:translateY(-8px);
+
+transition:
+max-height 0.45s ease,
+opacity 0.25s ease,
+transform 0.3s ease,
+padding 0.3s ease,
+margin-top 0.3s ease;
+}
+
+/* SHOW ON HOVER */
+.faq-section .faq:hover .answer{
+max-height:250px;
+padding:16px 20px;
+margin-top:10px;
+opacity:1;
+transform:translateY(0);
+}
+
+/* RIGHT ICON */
+.faq-section .msg{
+min-width:40px;
+height:40px;
+border-radius:50%;
+background:rgba(255,255,255,0.08);
+display:flex;
+align-items:center;
+justify-content:center;
+transition:0.3s;
+}
+
+.faq-section .faq:hover .msg{
+background:rgba(0,255,150,0.15);
+transform:scale(1.05);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.faq-section{
+padding:60px 15px;
+align-items:flex-start;
+}
+
+.faq-section .container{
+width:100%;
+padding:25px 20px;
+}
+
+.faq-section h1{
+font-size:16px;
+text-align:left;
+margin-bottom:25px;
+}
+
+.faq-section .faq{
+flex-direction:column;
+gap:10px;
+margin-bottom:16px;
+}
+
+.faq-section .icon,
+.faq-section .msg{
+display:none;
+}
+
+.faq-section .question{
+font-size:14px;
+padding:12px 16px;
+}
+
+.faq-section .answer{
+font-size:13px;
+padding:0 15px;
+}
+
+.faq-section .faq:hover .answer{
+padding:14px 15px;
+}
+
+.faq-section .tag{
+font-size:11px;
+padding:5px 12px;
+}
+
+}
+</style>
+
+<div class="container">
+
+<div class="tag">FAQs</div>
+
+<h1>
+Have Questions? Here Are Quick Answers <br>
+To Some Of The Most Common Queries
+</h1>
+
+<div class="faq">
+<div class="icon">?</div>
+<div class="content">
+<div class="question">Do You Offer Revisions On Designs?</div>
+<div class="answer">
+Yes, I Provide Revisions To Ensure The Final Design Aligns Perfectly With Your Expectations.
+</div>
+</div>
+<div class="msg">💬</div>
+</div>
+
+<div class="faq">
+<div class="icon">?</div>
+<div class="content">
+<div class="question">What Tools Do You Use For Your Work?</div>
+<div class="answer">
+I Use Industry Standard Tools Like Figma, Adobe XD, Photoshop, And Modern Web Technologies.
+</div>
+</div>
+<div class="msg">💬</div>
+</div>
+
+<div class="faq">
+<div class="icon">?</div>
+<div class="content">
+<div class="question">Can You Help With Branding From Scratch?</div>
+<div class="answer">
+Yes, I Can Help Build Your Brand Identity From Logo Design To Complete Visual Systems.
+</div>
+</div>
+<div class="msg">💬</div>
+</div>
+
+<div class="faq">
+<div class="icon">?</div>
+<div class="content">
+<div class="question">How Do You Approach A New Project?</div>
+<div class="answer">
+I Start With Research, Understand Requirements, Then Move To Design, Feedback, And Final Delivery.
+</div>
+</div>
+<div class="msg">💬</div>
+</div>
+
+<div class="faq">
+<div class="icon">?</div>
+<div class="content">
+<div class="question">What Is The Cost Of Your Services?</div>
+<div class="answer">
+Pricing Depends On Project Scope, Complexity, And Timeline. Custom Quotes Are Provided.
+</div>
+</div>
+<div class="msg">💬</div>
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- PREMIUM FOOTER SECTION -->
+
+<section class="premium-footer">
+<style>
+  /* -------------------------
+WHITE + GREEN PREMIUM FOOTER
+-------------------------*/
+
+.premium-footer{
+background:#8bb5aa;
+padding:90px 0 50px;
+border-top:1px solid #e4efe9;
+}
+
+.premium-footer .container{
+max-width:1200px;
+margin:auto;
+padding:0 70px;
+}
+
+/* GRID */
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1.5fr;
+gap:80px;
+margin-bottom:70px;
+}
+
+/* LOGO */
+.footer-logo{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:20px;
+}
+
+.footer-logo img{
+width:44px;
+height:44px;
+}
+
+.footer-logo h2{
+font-size:24px;
+letter-spacing:3px;
+font-weight:600;
+color:#fcfcfc; /* main green */
+}
+
+.footer-logo span{
+color:#ffffff; /* accent green */
+}
+
+/* TEXT */
+.footer-desc{
+color:#212121;
+line-height:1.9;
+font-size:14px;
+max-width:360px;
+}
+
+/* SOCIAL */
+.social{
+display:flex;
+gap:16px;
+margin-top:20px;
+}
+
+.social a{
+width:42px;
+height:42px;
+border-radius:50%;
+background:#ffffff;
+border:1px solid #cfd1d0;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#1f3d2b;
+text-decoration:none;
+transition:all 0.35s ease;
+}
+
+.social a:hover{
+background:#1f3d2b;
+color:#6f6e6e;
+transform:translateY(-5px);
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* LINKS */
+.footer-title{
+font-weight:600;
+margin-bottom:20px;
+color:#1f3d2b;
+letter-spacing:1px;
+}
+
+.footer-links p{
+font-size:14px;
+color:#232222;
+margin-bottom:12px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.footer-links p:hover{
+color:#2e6b4f;
+padding-left:5px;
+}
+
+/* NEWSLETTER */
+.newsletter input{
+width:100%;
+padding:14px;
+border:1px solid #e4efe9;
+background:#fff;
+margin-bottom:15px;
+outline:none;
+transition:0.3s;
+}
+
+.newsletter input:focus{
+border-color:#2e6b4f;
+}
+
+/* BUTTON */
+.signup{
+background:#1f3d2b;
+color:#fff;
+padding:12px 24px;
+display:inline-block;
+font-size:13px;
+cursor:pointer;
+letter-spacing:1px;
+transition:0.3s;
+}
+
+.signup:hover{
+background:#2e6b4f;
+}
+
+/* BOTTOM */
+.footer-bottom{
+border-top:1px solid #838383;
+padding-top:20px;
+display:flex;
+justify-content:space-between;
+font-size:13px;
+color:#000000;
+}
+
+/* RESPONSIVE */
+@media (max-width:1024px){
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
+.premium-footer .container{
+padding:0 40px;
+}
+}
+
+@media (max-width:768px){
+
+.footer-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.footer-logo{
+justify-content:center;
+}
+
+.footer-desc{
+margin:auto;
+}
+
+.social{
+justify-content:center;
+}
+
+.footer-bottom{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+.premium-footer .container{
+padding:0 20px;
+}
+
+}
+</style>
+<div class="container">
+
+<div class="footer-grid">
+
+<!-- BRAND -->
+<div class="footer-brand">
+
+<div class="footer-logo">
+<img src="imgs/JII.png" alt="logo">
+<h2>INTER<span>IO</span></h2>
+</div>
+
+<p class="footer-desc">
+Premium interior design solutions crafted with elegance,
+comfort and timeless aesthetics for modern living spaces.
+</p>
+
+<div class="social">
+<a href="#">⌾</a>
+<a href="#">f</a>
+<a href="#">𝕏</a>
+<a href="#">▶</a>
+</div>
+
+</div>
+
+<!-- COMPANY -->
+<div class="footer-links">
+<div class="footer-title">Company</div>
+<p>About</p>
+<p>Projects</p>
+<p>Services</p>
+<p>Careers</p>
+</div>
+
+<!-- SUPPORT -->
+<div class="footer-links">
+<div class="footer-title">Support</div>
+<p>FAQ</p>
+<p>Contact</p>
+<p>Privacy</p>
+<p>Terms</p>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+<div class="footer-title">Newsletter</div>
+<input placeholder="Enter your email">
+<div class="signup">Subscribe</div>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<div>© 2026 INTERIO. All rights reserved.</div>
+<div>Designed with elegance</div>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

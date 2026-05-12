@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Page</title>
+
+<!-- ICONS -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+
+</head>
+<body>
+
+<section class="contact-page">
+<style>
+    /* ================= PREMIUM COLOR SYSTEM ================= */
+:root{
+--primary:#5c7b69;
+--accent:#0f1815;
+--light:#f6faf7;
+--soft:#e8f5e9;
+--text:#252d25;
+--muted:#1f2522;
+}
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:var(--light);
+color:var(--text);
+}
+
+/* CONTAINER */
+.container{
+
+margin:auto;
+}
+
+/* ================= HERO ================= */
+.hero{
+height:300px;
+background:url("imgs/interia3.jpg") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(rgba(42, 37, 37, 0.6), rgba(90, 90, 90, 0.8));
+}
+
+.hero h1{
+font-size:48px;
+color:#fff;
+z-index:2;
+font-weight: 300;
+}
+
+.hero p{
+color:#dfeee5;
+z-index:2;
+}
+
+/* ================= CONTACT ================= */
+.contact-section{
+padding:80px 0;
+display:flex;
+gap:50px;
+}
+
+.contact-form{
+background:#fff;
+padding:40px;
+width:40%;
+border-radius:14px;
+box-shadow:0 20px 50px rgba(0,0,0,0.06);
+border:1px solid #eef3ef;
+}
+
+.contact-form h4{
+color:var(--accent);
+letter-spacing:1px;
+font-weight: 300;
+}
+
+.contact-form h2{
+margin:15px 0 25px;
+font-weight: 300;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:13px;
+margin-bottom:15px;
+border:1px solid #e4ebe5;
+border-radius:1px;
+background:#fbfdfb;
+transition:0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+border-color:var(--accent);
+outline:none;
+box-shadow:0 0 0 2px rgba(76,175,80,0.1);
+}
+
+.contact-form button{
+width:100%;
+padding:13px;
+border-radius:3px;
+border:none;
+background:var(--primary);
+color:#fff;
+font-weight:500;
+cursor:pointer;
+transition:0.3s;
+}
+
+.contact-form button:hover{
+background:var(--accent);
+}
+
+/* RIGHT SIDE */
+.contact-info{
+width:60%;
+}
+
+.contact-info p{
+color:var(--muted);
+line-height:1.7;
+margin-bottom:30px;
+}
+
+/* INFO GRID */
+.info-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+margin-bottom:30px;
+}
+
+.info-box{
+display:flex;
+gap:15px;
+background:#fff;
+padding:18px;
+border-radius:1px;
+box-shadow:0 10px 30px rgba(0,0,0,0.04);
+border:1px solid #eef3ef;
+transition:0.3s;
+}
+
+.info-box:hover{
+transform:translateY(-5px);
+}
+
+.info-box i{
+width:42px;
+height:42px;
+background:var(--soft);
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+color:var(--primary);
+}
+
+/* MAP */
+.map{
+height:220px;
+border-radius:2px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* ================= FAQ ================= */
+.faq-section{
+background:linear-gradient(135deg,#a8c4c7,#6d7f86);
+color:#fff;
+padding:90px 0;
+text-align:center;
+margin:50px;
+}
+
+.faq-section h2{
+margin-bottom:50px;
+font-size:28px;
+font-weight: 300;
+}
+
+.faq-container{
+
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+}
+
+.faq-item{
+border-bottom:1px solid rgba(255,255,255,0.1);
+padding:18px 0;
+cursor:pointer;
+transition:.3s;
+}
+
+.faq-question{
+display:flex;
+justify-content:space-between;
+color:#e0efe6;
+}
+
+.faq-question span{
+color:#fff;
+font-size:18px;
+}
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+color:#ecf0ee;
+transition:0.4s;
+}
+
+.faq-item.active .faq-answer{
+max-height:120px;
+margin-top:10px;
+}
+
+/* ================= CTA ================= */
+.cta{
+margin:60px auto;
+
+height:380px;
+background:url("imgs/interia2.jpg") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+position:relative;
+border-radius:1px;
+overflow:hidden;
+}
+.container,
+.faq-container,
+.cta{
+width:100%;
+max-width:1200px;
+margin:auto;
+padding:30px 15px;
+}
+
+.cta::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.55));
+}
+
+.cta h4{
+color:#cfe5d8;
+z-index:2;
+font-weight: 300;
+}
+
+.cta h2{
+color:#fff;
+margin:10px 0 20px;
+font-weight: 300;
+z-index:2;
+}
+
+.cta button{
+padding:12px 28px;
+border-radius:2px;
+border:none;
+background:#97d1d2;
+color:#fff;
+font-weight:500;
+cursor:pointer;
+z-index:2;
+transition:0.3s;
+}
+
+.cta button:hover{
+background:#2e7d67;
+}
+
+/* ================= RESPONSIVE ================= */
+/* ================= PERFECT MOBILE FIX ================= */
+
+@media (max-width:768px){
+
+/* REMOVE SIDE SPACING ISSUES */
+body{
+overflow-x:hidden;
+padding: 30px 20px;
+}
+
+/* HERO */
+.hero{
+height:200px;
+padding:0 15px;
+}
+
+.hero h1{
+font-size:28px;
+text-align:center;
+}
+
+/* MAIN LAYOUT STACK */
+.contact-section{
+flex-direction:column;
+gap:25px;
+padding:40px 0;
+}
+
+/* FULL WIDTH */
+.contact-form,
+.contact-info{
+width:100%;
+}
+
+/* FORM FIX */
+.contact-form{
+padding:20px;
+}
+
+/* GRID -> SINGLE COLUMN */
+.info-grid{
+grid-template-columns:1fr;
+gap:15px;
+}
+
+/* INFO BOX STACK */
+.info-box{
+flex-direction:row;
+align-items:flex-start;
+}
+
+/* MAP */
+.map{
+height:180px;
+}
+
+/* FAQ FIX */
+.faq-section{
+margin:0;              /* IMPORTANT */
+padding:50px 15px;
+}
+
+.faq-container{
+grid-template-columns:1fr;
+gap:20px;
+}
+
+/* CTA FIX */
+.cta{
+width:100%;
+height:auto;
+padding:40px 15px;
+margin:30px auto;
+}
+
+.cta h2{
+font-size:20px;
+text-align:center;
+}
+
+}
+
+/* SMALL DEVICES */
+@media (max-width:480px){
+
+.hero h1{
+font-size:24px;
+}
+
+.contact-form input,
+.contact-form textarea{
+font-size:14px;
+padding:10px;
+}
+
+.contact-form button{
+padding:10px;
+font-size:14px;
+}
+
+.cta h2{
+font-size:18px;
+}
+
+}
+</style>
+<!-- HERO -->
+<div class="hero">
+<h1>Contact Us</h1>
+<p>Home / Contact</p>
+</div>
+
+<!-- CONTACT -->
+<div class="container contact-section">
+
+<!-- LEFT -->
+<div class="contact-form">
+<h4>Contact Us</h4>
+<h2>Get In Touch</h2>
+
+<input type="text" placeholder="Your Name...">
+<input type="email" placeholder="example@email.com">
+<input type="text" placeholder="Title...">
+<textarea placeholder="Type Here..."></textarea>
+
+<button>Send Now</button>
+</div>
+
+<!-- RIGHT -->
+<div class="contact-info">
+
+<p>
+Premium interior solutions crafted with elegance and modern aesthetics.
+We are here to bring your dream space to life with precision and creativity.
+</p>
+
+<div class="info-grid">
+
+<div class="info-box">
+<i data-lucide="phone"></i>
+<div>
+<h4>Phone Number</h4>
+<span>+6282 4032 567</span>
+</div>
+</div>
+
+<div class="info-box">
+<i data-lucide="mail"></i>
+<div>
+<h4>Email Address</h4>
+<span>example@email.com</span>
+</div>
+</div>
+
+<div class="info-box">
+<i data-lucide="message-circle"></i>
+<div>
+<h4>Whatsapp</h4>
+<span>082-245-7253</span>
+</div>
+</div>
+
+<div class="info-box">
+<i data-lucide="map-pin"></i>
+<div>
+<h4>Our Office</h4>
+<span>2443 Oak Ridge Omaha, QA 45065</span>
+</div>
+</div>
+
+</div>
+
+<div class="map">
+<iframe 
+src="https://www.google.com/maps?q=London&output=embed"
+width="100%" 
+height="100%" 
+style="border:0;" 
+loading="lazy">
+</iframe>
+</div>
+
+</div>
+
+</div>
+
+<!-- FAQ -->
+<div class="faq-section">
+
+<h2>Have any questions?</h2>
+
+<div class="faq-container">
+
+<div class="faq-column">
+
+<div class="faq-item">
+<div class="faq-question">How to Change my Photo from Admin Dashboard?<span>+</span></div>
+<div class="faq-answer">Update your profile photo from admin settings.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">How to Change my Password easily?<span>+</span></div>
+<div class="faq-answer">Go to account settings and update password.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">How to Change Subscription Plan?<span>+</span></div>
+<div class="faq-answer">Use billing section and select payment method.</div>
+</div>
+
+</div>
+
+<div class="faq-column">
+
+<div class="faq-item">
+<div class="faq-question">How to update contact info?<span>+</span></div>
+<div class="faq-answer">Edit details in profile section.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">How to contact support?<span>+</span></div>
+<div class="faq-answer">Use contact form or email support.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">How to track requests?<span>+</span></div>
+<div class="faq-answer">Track from dashboard services tab.</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CTA -->
+<div class="cta">
+<h4>Hire Us Now</h4>
+<h2>We Are Always Ready To<br>Take A Perfect Shot</h2>
+<button>Get Started</button>
+</div>
+
+</section>
+
+
+
+
+<!-- PREMIUM FOOTER SECTION -->
+
+<section class="premium-footer">
+<style>
+  /* -------------------------
+WHITE + GREEN PREMIUM FOOTER
+-------------------------*/
+
+.premium-footer{
+background:#8bb5aa;
+padding:90px 0 50px;
+border-top:1px solid #e4efe9;
+margin-top:40px;
+
+}
+
+.premium-footer .container{
+max-width:1200px;
+margin:auto;
+padding:0 70px;
+}
+
+/* GRID */
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1.5fr;
+gap:80px;
+margin-bottom:70px;
+}
+
+/* LOGO */
+.footer-logo{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:20px;
+}
+
+.footer-logo img{
+width:44px;
+height:44px;
+}
+
+.footer-logo h2{
+font-size:24px;
+letter-spacing:3px;
+font-weight:600;
+color:#fcfcfc; /* main green */
+}
+
+.footer-logo span{
+color:#ffffff; /* accent green */
+}
+
+/* TEXT */
+.footer-desc{
+color:#212121;
+line-height:1.9;
+font-size:14px;
+max-width:360px;
+}
+
+/* SOCIAL */
+.social{
+display:flex;
+gap:16px;
+margin-top:20px;
+}
+
+.social a{
+width:42px;
+height:42px;
+border-radius:50%;
+background:#ffffff;
+border:1px solid #cfd1d0;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#1f3d2b;
+text-decoration:none;
+transition:all 0.35s ease;
+}
+
+.social a:hover{
+background:#1f3d2b;
+color:#6f6e6e;
+transform:translateY(-5px);
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* LINKS */
+.footer-title{
+font-weight:600;
+margin-bottom:20px;
+color:#1f3d2b;
+letter-spacing:1px;
+}
+
+.footer-links p{
+font-size:14px;
+color:#232222;
+margin-bottom:12px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.footer-links p:hover{
+color:#2e6b4f;
+padding-left:5px;
+}
+
+/* NEWSLETTER */
+.newsletter input{
+width:100%;
+padding:14px;
+border:1px solid #e4efe9;
+background:#fff;
+margin-bottom:15px;
+outline:none;
+transition:0.3s;
+}
+
+.newsletter input:focus{
+border-color:#2e6b4f;
+}
+
+/* BUTTON */
+.signup{
+background:#1f3d2b;
+color:#fff;
+padding:12px 24px;
+display:inline-block;
+font-size:13px;
+cursor:pointer;
+letter-spacing:1px;
+transition:0.3s;
+}
+
+.signup:hover{
+background:#2e6b4f;
+}
+
+/* BOTTOM */
+.footer-bottom{
+border-top:1px solid #838383;
+padding-top:20px;
+display:flex;
+justify-content:space-between;
+font-size:13px;
+color:#000000;
+}
+
+/* RESPONSIVE */
+@media (max-width:1024px){
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
+.premium-footer .container{
+padding:0 40px;
+}
+}
+
+@media (max-width:768px){
+
+.footer-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.footer-logo{
+justify-content:center;
+}
+
+.footer-desc{
+margin:auto;
+}
+
+.social{
+justify-content:center;
+}
+
+.footer-bottom{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+.premium-footer .container{
+padding:0 20px;
+}
+
+}
+</style>
+<div class="container">
+
+<div class="footer-grid">
+
+<!-- BRAND -->
+<div class="footer-brand">
+
+<div class="footer-logo">
+<img src="imgs/JII.png" alt="logo">
+<h2>INTER<span>IO</span></h2>
+</div>
+
+<p class="footer-desc">
+Premium interior design solutions crafted with elegance,
+comfort and timeless aesthetics for modern living spaces.
+</p>
+
+<div class="social">
+<a href="#">⌾</a>
+<a href="#">f</a>
+<a href="#">𝕏</a>
+<a href="#">▶</a>
+</div>
+
+</div>
+
+<!-- COMPANY -->
+<div class="footer-links">
+<div class="footer-title">Company</div>
+<p>About</p>
+<p>Projects</p>
+<p>Services</p>
+<p>Careers</p>
+</div>
+
+<!-- SUPPORT -->
+<div class="footer-links">
+<div class="footer-title">Support</div>
+<p>FAQ</p>
+<p>Contact</p>
+<p>Privacy</p>
+<p>Terms</p>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+<div class="footer-title">Newsletter</div>
+<input placeholder="Enter your email">
+<div class="signup">Subscribe</div>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<div>© 2026 INTERIO. All rights reserved.</div>
+<div>Designed with elegance</div>
+</div>
+
+</div>
+
+</section>
+
+<script>
+lucide.createIcons();
+
+document.querySelector(".contact-form button").addEventListener("click",()=>{
+alert("Message Sent!");
+});
+
+// FAQ toggle
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+  item.addEventListener("click", () => {
+
+    faqItems.forEach(i => {
+      if(i !== item) i.classList.remove("active");
+    });
+
+    item.classList.toggle("active");
+  });
+});
+</script>
+
+</body>
+</html>
