@@ -686,7 +686,7 @@ document.querySelector('.distinction-btn').addEventListener('mouseleave',functio
 /* SECTION */
 .presence-map-section{
     background:#f8f7f4;
-    padding:80px 0;
+   
     overflow:hidden;
 }
 
@@ -780,9 +780,7 @@ document.querySelector('.distinction-btn').addEventListener('mouseleave',functio
 /* LARGE TABLET */
 @media(max-width:1200px){
 
-    .presence-map-section{
-        padding:60px 20px;
-    }
+   
 
     .pin-label{
         font-size:14px;
@@ -798,9 +796,7 @@ document.querySelector('.distinction-btn').addEventListener('mouseleave',functio
 /* TABLET */
 @media(max-width:992px){
 
-    .presence-map-section{
-        padding:20px 15px;
-    }
+   
 
     .pin-dot{
         width:7px;
@@ -826,9 +822,7 @@ document.querySelector('.distinction-btn').addEventListener('mouseleave',functio
 /* MOBILE */
 @media(max-width:768px){
 
-    .presence-map-section{
-        padding:25px 0;
-    }
+   
 
     .pin-dot{
         width:5px;
@@ -2456,6 +2450,7 @@ TRUSTED CLIENTS SECTION
     padding:70px 0;
     overflow:hidden;
     position:relative;
+    font-family:'Montserrat',sans-serif;
 }
 
 /* TOP DASHED LINE */
@@ -2476,36 +2471,32 @@ LAYOUT
 .clients-main{
     display:flex;
     align-items:center;
-    gap:70px;
+    gap:60px;
     padding:0 60px;
 }
 
 /* =========================
-FIXED TRUST BOX
+TRUST BOX
 ========================= */
 
 .client-label{
     min-width:370px;
-    height:70px;
-
+    height:85px;
     border:2px solid #e5e5e5;
     background:#f8f8f8;
-
     display:flex;
     align-items:center;
-
     padding:0 30px;
-
     flex-shrink:0;
 }
 
 .client-label h2{
     margin:0;
-    font-family:'Oswald', sans-serif;
-    font-size:28px;
-    line-height:1;
+    font-family:'Oswald',sans-serif;
+    font-size:30px;
     font-weight:400;
     color:#1e1e1e;
+    line-height:1;
 }
 
 .client-label span{
@@ -2520,17 +2511,17 @@ SLIDER
 .clients-slider{
     flex:1;
     overflow:hidden;
-    position:relative;
+    height:90px;
+    display:flex;
+    align-items:center;
 }
-
-/* TRACK */
 
 .clients-track{
     display:flex;
     align-items:center;
-    gap:60px;
-
+    gap:2px;
     transition:transform 1.2s ease;
+    will-change:transform;
 }
 
 /* =========================
@@ -2538,36 +2529,35 @@ LOGOS
 ========================= */
 
 .client-logo{
-    min-width:180px;
-    height:90px;
-
+    min-width:220px;
+    width:220px;
+    height:200px;
     display:flex;
     align-items:center;
     justify-content:center;
-
-    flex-shrink:0;
-
-    opacity:.55;
+ flex-shrink:0;
+    opacity:1;
     transition:.4s ease;
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
 }
 
 .client-logo img{
-    width:100%;
-    object-fit:contain;
-
-    filter:grayscale(100%);
+    width:auto;
+    height:auto;
+    max-width:355px;
+    max-height:255px;
+    object-fit:cover;
+    display:block;
+    filter:grayscale(10%);
     transition:.4s ease;
-}
-
-/* HOVER */
-
-.client-logo:hover{
-    opacity:1;
+    filter: grayscale(100%) brightness(71%) contrast(94%);
 }
 
 .client-logo:hover img{
-    filter:grayscale(0%);
-    transform:scale(1.04);
+    filter:grayscale(70%) brightness(51%) contrast(24%);
+    transform:scale(1.05);
 }
 
 /* =========================
@@ -2576,21 +2566,15 @@ RESPONSIVE
 
 @media(max-width:1400px){
 
-    .clients-main{
-        gap:50px;
-    }
-
-    .client-label{
-        min-width:360px;
-        height:95px;
-    }
-
-    .client-label h2{
-        font-size:32px;
-    }
-
     .client-logo{
-        min-width:150px;
+        min-width:190px;
+        width:190px;
+        height:85px;
+    }
+
+    .client-logo img{
+        max-width:165px;
+        max-height:65px;
     }
 }
 
@@ -2598,19 +2582,27 @@ RESPONSIVE
 
     .clients-main{
         padding:0 40px;
+        gap:45px;
     }
 
     .client-label{
         min-width:320px;
-        height:88px;
+        height:80px;
     }
 
     .client-label h2{
-        font-size:28px;
+        font-size:26px;
     }
 
     .client-logo{
-        min-width:130px;
+        min-width:170px;
+        width:200px;
+        height:80px;
+    }
+
+    .client-logo img{
+        max-width:145px;
+        max-height:98px;
     }
 }
 
@@ -2627,7 +2619,7 @@ RESPONSIVE
 
     .client-label{
         min-width:250px;
-        height:78px;
+        height:72px;
         padding:0 18px;
     }
 
@@ -2636,7 +2628,14 @@ RESPONSIVE
     }
 
     .client-logo{
-        min-width:110px;
+        min-width:145px;
+        width:145px;
+        height:75px;
+    }
+
+    .client-logo img{
+        max-width:125px;
+        max-height:50px;
     }
 }
 
@@ -2670,10 +2669,18 @@ RESPONSIVE
 
     .clients-slider{
         width:100%;
+        height:70px;
     }
 
     .client-logo{
-        min-width:90px;
+        min-width:175px;
+        width:175px;
+        height:95px;
+    }
+
+    .client-logo img{
+        max-width:138px;
+        max-height:132px;
     }
 }
 
@@ -2688,123 +2695,116 @@ RESPONSIVE
     }
 
     .client-logo{
-        min-width:75px;
-    }
+    width:130px;
+    min-width:130px;
+    height:110px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+.client-logo img{
+    width:auto;
+    height:auto;
+
+    max-width:135px;
+    max-height:80px;
+
+    object-fit:contain;
+    display:block;
+
+    filter:grayscale(100%) brightness(71%) contrast(94%);
+    transition:.4s ease;
+}
 
     .clients-track{
-        gap:30px;
+        gap:1px;
     }
+
 }
 
 </style>
 
 <div class="clients-main">
 
-    <!-- FIXED BOX -->
-
     <div class="client-label">
-
-        <h2>
-            <span>100+</span> Our Trusted Client
-        </h2>
-
+        <h2><span>100+</span> Our Trusted Client</h2>
     </div>
 
-    <!-- SLIDER -->
-
     <div class="clients-slider">
-
         <div class="clients-track"></div>
-
     </div>
 
 </div>
 
 <script>
 
-/* =========================
-LOGOS
-========================= */
-
 const logos = [
-
-    "YOUR-LOGO-1.png",
-    "YOUR-LOGO-2.png",
-    "YOUR-LOGO-3.png",
-    "YOUR-LOGO-4.png",
-    "YOUR-LOGO-5.png",
-    "YOUR-LOGO-6.png"
-
+"imgs/Logos/1.png","imgs/Logos/2.png","imgs/Logos/3.png","imgs/Logos/4.png",
+"imgs/Logos/5.png","imgs/Logos/6.png","imgs/Logos/7.png","imgs/Logos/8.png",
+"imgs/Logos/9.png","imgs/Logos/10.png","imgs/Logos/11.png","imgs/Logos/12.png",
+"imgs/Logos/13.png","imgs/Logos/14.png","imgs/Logos/15.png","imgs/Logos/16.png",
+"imgs/Logos/17.png","imgs/Logos/18.png","imgs/Logos/19.png","imgs/Logos/20.png",
+"imgs/Logos/21.png","imgs/Logos/22.png","imgs/Logos/23.png","imgs/Logos/24.png",
+"imgs/Logos/25.png","imgs/Logos/26.png","imgs/Logos/27.png","imgs/Logos/28.png",
+"imgs/Logos/29.png","imgs/Logos/30.png","imgs/Logos/31.png","imgs/Logos/32.png",
+"imgs/Logos/33.png","imgs/Logos/34.png","imgs/Logos/35.png","imgs/Logos/36.png",
+"imgs/Logos/37.png","imgs/Logos/38.png","imgs/Logos/39.png","imgs/Logos/40.png",
+"imgs/Logos/41.png"
 ];
 
 const track = document.querySelector('.clients-track');
 
-/* =========================
-CREATE LOGOS
-========================= */
+/* DUPLICATE FOR LOOP */
 
-logos.forEach((logo)=>{
-
+[...logos, ...logos].forEach((logo)=>{
     track.innerHTML += `
-
         <div class="client-logo">
-
             <img src="${logo}" alt="logo">
-
         </div>
-
     `;
-
 });
-
-/* =========================
-STEP SLIDER
-========================= */
 
 let current = 0;
 
 function slideLogos(){
 
-    const logoWidth =
-        document.querySelector('.client-logo').offsetWidth + 60;
+    const logo = document.querySelector('.client-logo');
+    const gap = parseInt(getComputedStyle(track).gap);
+    const step = logo.offsetWidth + gap;
 
     current++;
 
-    /* MOVE 1 LOGO */
+    track.style.transform = `translateX(-${current * step}px)`;
 
-    track.style.transform =
-        `translateX(-${current * logoWidth}px)`;
-
-    /* RESET */
-
-    if(current >= logos.length - 3){
+    if(current >= logos.length){
 
         setTimeout(()=>{
 
-            track.style.transition = 'none';
-            track.style.transform = 'translateX(0)';
-            current = 0;
+            track.style.transition='none';
+            track.style.transform='translateX(0)';
+            current=0;
 
             setTimeout(()=>{
-
-                track.style.transition =
-                'transform 1.2s ease';
-
+                track.style.transition='transform 1.2s ease';
             },50);
 
         },1200);
-
     }
-
 }
 
-/* MOVE EVERY 5 SECONDS */
-
-setInterval(slideLogos, 5000);
+setInterval(slideLogos,3000);
 
 </script>
 
 </section>
+
 
 <section class="clients-section">
 
@@ -2832,52 +2832,47 @@ setInterval(slideLogos, 5000);
 .slider-track{
   display:flex;
   align-items:center;
-  width:max-content;
+  white-space:nowrap;
+  will-change:transform;
 }
 
-/* EACH SLIDE */
-.slide{
-  min-width:100vw;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:30px;
-  padding:0 40px;
-  flex-shrink:0;
-}
-
-/* IMAGE BOX */
 .logo-box{
+  flex:0 0 auto;
+  width:220px;
   height:180px;
   display:flex;
   align-items:center;
   justify-content:center;
+  margin:0 20px;
 }
 
 .logo-box img{
-  max-width:220px;
+  max-width:200px;
   width:100%;
   height:auto;
   object-fit:contain;
+  transition:transform .4s ease;
+}
+
+.logo-box:hover img{
+  transform:scale(1.08);
 }
 
 /* Tablet */
 @media(max-width:992px){
 
   .section-title{
-    font-size:48px;
-  }
-
-  .slide{
-    gap:20px;
-    padding:0 20px;
+    font-size:46px;
   }
 
   .logo-box{
-    height:150px;
+    width:170px;
+    height:140px;
+    margin:0 15px;
   }
 
   .logo-box img{
-    max-width:170px;
+    max-width:150px;
   }
 }
 
@@ -2885,29 +2880,18 @@ setInterval(slideLogos, 5000);
 @media(max-width:768px){
 
   .clients-section{
-    padding:20px 0;
+    padding:40px 0;
   }
 
   .section-title{
-    font-size:36px;
-    margin-bottom:40px;
-  }
-
-  .slider-track{
-    animation:mobileLoop 25s linear infinite;
-  }
-
-  .slide{
-    min-width:auto;
-    display:flex;
-    gap:25px;
-    padding:0 15px;
-    flex-shrink:0;
+    font-size:34px;
+    margin-bottom:35px;
   }
 
   .logo-box{
-    height:100px;
-    min-width:100px;
+    width:110px;
+    height:90px;
+    margin:0 10px;
   }
 
   .logo-box img{
@@ -2918,32 +2902,18 @@ setInterval(slideLogos, 5000);
 /* Small Mobile */
 @media(max-width:480px){
 
-  .slide{
-    gap:15px;
-    padding:0 10px;
-  }
-
-  .logo-box{
-    height:80px;
-    min-width:80px;
-  }
-
-  .logo-box img{
-    max-width:80px;
-  }
-
   .section-title{
     font-size:28px;
   }
-}
 
-/* MOBILE CONTINUOUS LOOP */
-@keyframes mobileLoop{
-  0%{
-    transform:translateX(0);
+  .logo-box{
+    width:85px;
+    height:70px;
+    margin:0 8px;
   }
-  100%{
-    transform:translateX(-50%);
+
+  .logo-box img{
+    max-width:75px;
   }
 }
 </style>
@@ -2954,93 +2924,60 @@ setInterval(slideLogos, 5000);
 
 <div class="slider-wrapper">
 
-<div class="slider-track">
+<div class="slider-track" id="sliderTrack">
 
-<!-- SLIDE 1 -->
-<div class="slide">
 <div class="logo-box"><img src="imgs/partner1-removebg-preview.png" alt=""></div>
 <div class="logo-box"><img src="imgs/partner2-removebg-preview.png" alt=""></div>
 <div class="logo-box"><img src="imgs/partner3-removebg-preview.png" alt=""></div>
 <div class="logo-box"><img src="imgs/partner4-removebg-preview.png" alt=""></div>
-</div>
-
-<!-- SLIDE 2 -->
-<div class="slide">
 <div class="logo-box"><img src="imgs/partner5-removebg-preview.png" alt=""></div>
-<div class="logo-box"><img src="imgs/partner6-removebg-preview.png" alt=""></div>
+<div class="logo-box"><img src="imgs/partner6-removebg.png" alt=""></div>
 <div class="logo-box"><img src="imgs/partner7-removebg-preview.png" alt=""></div>
 <div class="logo-box"><img src="imgs/partner8-removebg-preview.png" alt=""></div>
-</div>
-
-<!-- DUPLICATE -->
-<div class="slide">
-<div class="logo-box"><img src="imgs/partner1.png" alt=""></div>
-<div class="logo-box"><img src="imgs/partner2.png" alt=""></div>
-<div class="logo-box"><img src="imgs/partner3.png" alt=""></div>
-<div class="logo-box"><img src="imgs/partner4.png" alt=""></div>
-</div>
-
-<div class="slide">
-<div class="logo-box"><img src="imgs/partner5.jpeg" alt=""></div>
-<div class="logo-box"><img src="imgs/partner6.jpeg" alt=""></div>
-<div class="logo-box"><img src="imgs/partner7.jpeg" alt=""></div>
-<div class="logo-box"><img src="imgs/partner8.jpeg" alt=""></div>
-</div>
 
 </div>
+
 </div>
 </div>
 
 <script>
-const clientsSliderTrack = document.querySelector(".slider-track");
-const clientsSlides = document.querySelectorAll(".slide");
+const sliderTrack = document.getElementById("sliderTrack");
 
-let clientsCurrentIndex = 0;
-let clientsInterval;
+/* Duplicate logos */
+sliderTrack.innerHTML += sliderTrack.innerHTML;
 
-/* DESKTOP SLIDER */
-function clientsAutoSlide(){
+let scrollAmount = 0;
+let speed = 2;
 
-    clientsCurrentIndex++;
+function slideLogos(){
 
-    clientsSliderTrack.style.transition =
-      "transform 1.2s ease-in-out";
+    scrollAmount += speed;
 
-    clientsSliderTrack.style.transform =
-      `translateX(-${clientsCurrentIndex * 100}vw)`;
-
-    if(clientsCurrentIndex >= clientsSlides.length / 2){
-
-        setTimeout(() => {
-            clientsSliderTrack.style.transition = "none";
-            clientsCurrentIndex = 0;
-            clientsSliderTrack.style.transform = "translateX(0)";
-        },1300);
+    if(scrollAmount >= sliderTrack.scrollWidth / 2){
+        scrollAmount = 0;
     }
+
+    sliderTrack.style.transform =
+      `translateX(-${scrollAmount}px)`;
+
+    requestAnimationFrame(slideLogos);
 }
 
-/* INIT */
-function initClientsSlider(){
+slideLogos();
 
-    clearInterval(clientsInterval);
+/* Pause on hover */
+sliderTrack.addEventListener("mouseenter",()=>{
+    speed = 0;
+});
 
-    if(window.innerWidth > 768){
+sliderTrack.addEventListener("mouseleave",()=>{
+    speed = window.innerWidth <= 768 ? 0.5 : 1;
+});
 
-        clientsSliderTrack.style.animation = "none";
-
-        clientsInterval = setInterval(clientsAutoSlide, 5000);
-
-    } else {
-
-        clientsSliderTrack.style.transition = "none";
-        clientsSliderTrack.style.transform = "translateX(0)";
-        clientsSliderTrack.style.animation = "mobileLoop 25s linear infinite";
-    }
-}
-
-initClientsSlider();
-
-window.addEventListener("resize", initClientsSlider);
+/* Responsive speed */
+window.addEventListener("resize",()=>{
+    speed = window.innerWidth <= 768 ? 0.5 : 1;
+});
 </script>
 
 </section>
