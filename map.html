@@ -1,0 +1,257 @@
+# Dotted Maps (HTML + CSS + SVG)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dotted Maps</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f4f4f4;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+}
+
+.map-section{
+    width:100%;
+    max-width:1500px;
+    padding:40px;
+}
+
+.map-row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:80px;
+    flex-wrap:wrap;
+}
+
+.map-box{
+    position:relative;
+    width:500px;
+    height:350px;
+}
+
+svg{
+    width:100%;
+    height:100%;
+}
+
+/* DOTTED STYLE */
+.dots{
+    fill:url(#dotPattern);
+}
+
+/* LINE */
+.connection-line{
+    position:absolute;
+    width:220px;
+    height:1px;
+    background:#d8d8d8;
+    top:70px;
+    left:250px;
+    transform:rotate(-35deg);
+}
+
+/* SMALL DOTTED CIRCLES */
+.circle{
+    position:absolute;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:
+    radial-gradient(circle,#bcc2c8 18%,transparent 20%);
+    background-size:4px 4px;
+    border:1px solid #d8d8d8;
+}
+
+.circle.one{
+    top:42px;
+    left:250px;
+}
+
+.circle.two{
+    top:165px;
+    left:455px;
+}
+
+@media(max-width:992px){
+
+.map-row{
+    gap:40px;
+}
+
+.map-box{
+    width:100%;
+    max-width:450px;
+    height:300px;
+}
+
+.connection-line{
+    display:none;
+}
+
+}
+
+@media(max-width:576px){
+
+.map-section{
+    padding:20px;
+}
+
+.map-box{
+    height:230px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="map-section">
+
+<div class="map-row">
+
+    <!-- LEFT MAP -->
+    <div class="map-box">
+
+        <svg viewBox="0 0 600 400">
+
+            <defs>
+                <pattern id="dotPattern" width="8" height="8" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="1.2" fill="#b8bec5" />
+                </pattern>
+            </defs>
+
+            <!-- COMPLETE CHINA MAP -->
+            <path class="dots"
+            d="M55 245
+               L72 230
+               L90 228
+               L102 210
+               L125 198
+               L145 180
+               L170 176
+               L198 160
+               L230 145
+               L250 122
+               L285 118
+               L320 96
+               L360 105
+               L395 90
+               L430 105
+               L458 132
+               L492 140
+               L520 170
+               L540 198
+               L530 225
+               L505 245
+               L492 270
+               L470 285
+               L448 312
+               L415 320
+               L385 340
+               L355 332
+               L320 352
+               L290 340
+               L260 350
+               L228 335
+               L195 345
+               L170 325
+               L138 315
+               L120 295
+               L95 282
+               L72 262
+               Z" />
+
+        </svg>
+
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="connection-line"></div>
+
+    </div>
+
+    <!-- RIGHT MAP -->
+    <div class="map-box">
+
+        <svg viewBox="0 0 600 500">
+
+            <defs>
+                <pattern id="dotPattern2" width="8" height="8" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="1.2" fill="#b8bec5" />
+                </pattern>
+            </defs>
+
+            <!-- COMPLETE INDIA MAP -->
+            <path fill="url\(#dotPattern2\)"
+            d="M270 38
+               L300 52
+               L325 82
+               L352 102
+               L388 118
+               L420 145
+               L438 182
+               L452 220
+               L442 255
+               L420 292
+               L395 325
+               L378 360
+               L352 392
+               L328 430
+               L305 462
+               L286 442
+               L272 410
+               L252 372
+               L235 338
+               L212 315
+               L190 292
+               L176 252
+               L182 218
+               L194 188
+               L185 152
+               L198 122
+               L225 98
+               L245 70
+               Z" />
+
+            <!-- NORTH EAST -->
+            <path fill="url(#dotPattern2)"
+            d="M450 170
+               L500 180
+               L530 220
+               L500 260
+               L450 230
+               Z" />
+
+            <!-- SRI LANKA -->
+            <ellipse fill="url(#dotPattern2)" cx="350" cy="475" rx="18" ry="28" />
+
+        </svg>
+
+    </div>
+
+</div>
+
+</section>
+
+</body>
+</html>
+```
