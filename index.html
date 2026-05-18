@@ -446,7 +446,7 @@ background: none;}
 </ul>
 </div>
 
-<button class="quote-btn" onclick="window.location.href='quote.html'">
+<button class="quote-btn" onclick="window.location.href='#'">
 Get A Quote
 </button>
 
@@ -821,10 +821,10 @@ document.querySelector('.distinction-btn').addEventListener('mouseleave',functio
 
 /* DESKTOP POSITIONS */
 .china{ top:500px; left:375px; }
-.mumbai{ top:438px; left:845px; }
-.telangana{ top:520px; left:960px; }
-.andhra{ top:585px; left:1000px; }
-.bangalore{ top:655px; left:925px; }
+.mumbai{ top:500px; left:845px; }
+.telangana{ top:540px; left:960px; }
+.andhra{ top:545px; left:1010px; }
+.bangalore{ top:625px; left:955px; }
 
 /* LARGE TABLET */
 @media(max-width:1200px){
@@ -838,6 +838,18 @@ document.querySelector('.distinction-btn').addEventListener('mouseleave',functio
     .telangana{ top:385px; left:650px; }
     .andhra{ top:370px; left:680px; }
     .bangalore{ top:440px; left:650px; }
+}
+@media(max-width:1024px){
+
+    .pin-label{
+        font-size:14px;
+    }
+
+    .china{ top:360px; left:260px; }
+    .mumbai{ top:370px; left:603px; }
+    .telangana{ top:383px; left:675px; }
+    .andhra{ top:395px; left:710px; }
+    .bangalore{ top:448px; left:670px; }
 }
 
 /* TABLET */
@@ -882,10 +894,10 @@ document.querySelector('.distinction-btn').addEventListener('mouseleave',functio
     }
 
     .china{ top:280px; left:200px; }
-    .mumbai{ top:245px; left:445px; }
-    .telangana{ top:295px; left:505px; }
+    .mumbai{ top:267px; left:445px; }
+    .telangana{ top:280px; left:503px; }
     .andhra{ top:285px; left:528px; }
-    .bangalore{ top:330px; left:490px; }
+    .bangalore{ top:330px; left:502px; }
 }
 
 /* SMALL MOBILE */
@@ -896,10 +908,10 @@ document.querySelector('.distinction-btn').addEventListener('mouseleave',functio
     }
 
     .china{ top:145px; left:108px; }
-    .mumbai{ top:128px; left:240px; }
+    .mumbai{ top:147px; left:245px; }
     .telangana{ top:155px; left:275px; }
-    .andhra{ top:170px; left:285px; }
-    .bangalore{ top:180px; left:260px; }
+    .andhra{ top:160px; left:287px; }
+    .bangalore{ top:180px; left:274px; }
 }
 
 /* EXTRA SMALL */
@@ -931,7 +943,7 @@ document.querySelector('.distinction-btn').addEventListener('mouseleave',functio
         letter-spacing: 0;
     } 
     .china{ top:125px; left:88px; }
-    .mumbai{ top:110px; left:213px; }
+    .mumbai{ top:130px; left:213px; }
     .telangana{ top:137px; left:235px; }
     .andhra{ top:139px; left:245px; }
     .bangalore{ top:160px; left:236px; }
@@ -1665,7 +1677,7 @@ window.addEventListener("resize",()=>{
     minmax(0,1fr);
 
     /* FIXED EMPTY SPACE ISSUE */
-    grid-template-rows:repeat(10,180px);
+    grid-template-rows:repeat(8,180px);
 
     gap:14px;
 }
@@ -1790,24 +1802,11 @@ window.addEventListener("resize",()=>{
     grid-row:6/9;
 }
 
-.card8{
-    grid-column:3/4;
-    grid-row:9/10;
-}
+
 
 .card9{
     grid-column:1/2;
-    grid-row:7/11;
-}
-
-.card10{
-    grid-column:2/3;
-    grid-row:9/11;
-}
-
-.card11{
-    grid-column:3/4;
-    grid-row:10/11;
+    grid-row:7/9;
 }
 
 /* =========================
@@ -1860,10 +1859,9 @@ window.addEventListener("resize",()=>{
     .card5,
     .card6,
     .card7,
-    .card8,
-    .card9,
-    .card10,
-    .card11{
+   
+    .card9
+    {
         grid-column:auto;
         grid-row:auto;
     }
@@ -1922,10 +1920,9 @@ window.addEventListener("resize",()=>{
     .card5,
     .card6,
     .card7,
-    .card8,
-    .card9,
-    .card10,
-    .card11{
+   
+    .card9
+   {
         grid-column:auto;
         grid-row:auto;
     }
@@ -2092,17 +2089,7 @@ window.addEventListener("resize",()=>{
 
     </div>
 
-    <!-- 8 -->
-    <div class="grid-card card8">
-
-        <img src="imgs/joy-features (8).png" alt="">
-
-        <div class="work-info">
-            <h3>The Botanical Dining Room</h3>
-            <!-- <p>MILAN</p> -->
-        </div>
-
-    </div>
+  
 
     <!-- 9 -->
     <div class="grid-card card9">
@@ -2116,29 +2103,9 @@ window.addEventListener("resize",()=>{
 
     </div>
 
-    <!-- 10 -->
-    <div class="grid-card card10">
+   
 
-        <img src="imgs/joy-features (10).png" alt="">
-
-        <div class="work-info">
-            <h3>The Monolith Bath</h3>
-            <!-- <p>BERLIN</p> -->
-        </div>
-
-    </div>
-
-    <!-- 11 -->
-    <div class="grid-card card11">
-
-        <img src="imgs/joy-features (11).png" alt="">
-
-        <div class="work-info">
-            <h3>The Golden Hour Kitchen</h3>
-            <!-- <p>SEOUL</p> -->
-        </div>
-
-    </div>
+ 
 
 </div>
 
