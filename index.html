@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -768,9 +769,170 @@ document.querySelector('.distinction-btn').addEventListener('mouseleave',functio
 
 </section>
 
+<!--8-->
+<section class="clients-section">
+
+<style>
+.clients-section{
+  padding:80px 0;
+  background:#f5f5f5;
+  overflow:hidden;
+}
+
+.section-title{
+  text-align:center;
+  font-size:60px;
+  font-weight:500;
+  color:#666;
+  margin-bottom:70px;
+}
+
+.slider-wrapper{
+  overflow:hidden;
+  width:100%;
+  position:relative;
+}
+
+.slider-track{
+  display:flex;
+  align-items:center;
+  white-space:nowrap;
+  will-change:transform;
+}
+
+.logo-box{
+  flex:0 0 auto;
+  width:220px;
+  height:180px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 20px;
+}
+
+.logo-box img{
+  max-width:200px;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  transition:transform .4s ease;
+}
+
+.logo-box:hover img{
+  transform:scale(1.08);
+}
+
+/* Tablet */
+@media(max-width:992px){
+
+  .section-title{
+    font-size:46px;
+  }
+
+  .logo-box{
+    width:170px;
+    height:140px;
+    margin:0 15px;
+  }
+
+  .logo-box img{
+    max-width:150px;
+  }
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+  .clients-section{
+    padding:40px 0;
+  }
+
+  .section-title{
+    font-size:34px;
+    margin-bottom:35px;
+  }
+
+  .logo-box{
+    width:110px;
+    height:90px;
+    margin:0 10px;
+  }
+
+  .logo-box img{
+    max-width:100px;
+  }
+}
+
+/* Small Mobile */
+@media(max-width:480px){
+
+  .section-title{
+    font-size:28px;
+  }
+
+  .logo-box{
+    width:85px;
+    height:70px;
+    margin:0 8px;
+  }
+
+  .logo-box img{
+    max-width:75px;
+  }
+}
+
+@media(max-width:375px){
+.clients-section{
+  padding:10px 0;
+ 
+}
+  .section-title{
+    font-size:22px;
+    margin: 0 0 20px;
+  }
+
+  .logo-box{
+    width:70px;
+    height:60px;
+    margin:0 6px;
+  }
+
+  .logo-box img{
+    max-width:60px;
+  }
+}
+</style>
+
+<div class="container-fluid">
+
+<h2 class="section-title">Our Clients</h2>
+
+<div class="slider-wrapper">
+
+<div class="slider-track" id="sliderTrack">
+
+<div class="logo-box"><img src="imgs/partner1-removebg-preview.png" alt=""></div>
+<div class="logo-box"><img src="imgs/partner2-removebg-preview.png" alt=""></div>
+<div class="logo-box"><img src="imgs/partner3-removebg-preview.png" alt=""></div>
+<div class="logo-box"><img src="imgs/partner4-removebg-preview.png" alt=""></div>
+<div class="logo-box"><img src="imgs/partner5-removebg-preview.png" alt=""></div>
+<div class="logo-box"><img src="imgs/partner6-removebg.png" alt=""></div>
+<div class="logo-box"><img src="imgs/partner7-removebg-preview.png" alt=""></div>
+<div class="logo-box"><img src="imgs/partner8-removebg-preview.png" alt=""></div>
+
+</div>
+
+</div>
+</div>
+
+
+
+</section>
+
+
 
 <!--3-->
-<section class="presence-map-section">
+<!-- <section class="presence-map-section">
 
 <style>
 
@@ -1046,6 +1208,378 @@ function autoHighlightPins(){
 autoHighlightPins();
 
 setInterval(autoHighlightPins, 2000);
+</script>
+
+</section> -->
+
+
+<section class="presence-map-section">
+
+<style>
+.presence-map-section{
+    background:#f8f7f4;
+    overflow:hidden;
+}
+
+.presence-map-wrapper{
+    position:relative;
+    width:1680px;
+    max-width:100%;
+    margin:auto;
+}
+
+.presence-map-img{
+    width:100%;
+    display:block;
+}
+
+.map-pin{
+    position:absolute;
+    cursor:pointer;
+    z-index:5;
+}
+
+.pin-dot{
+    width:8px;
+    height:8px;
+    background:#3e3d3b;
+    border-radius:50%;
+    position:relative;
+    display:block;
+    transition:.35s ease;
+}
+
+.pin-dot::after{
+    content:'';
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:20px;
+    height:20px;
+    background:rgba(101,99,98,.18);
+    border-radius:50%;
+    transition:.35s ease;
+}
+
+.pin-label{
+    position:absolute;
+    bottom:18px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:16px;
+    color:#1b1b1b;
+    font-weight:500;
+    letter-spacing:1px;
+    white-space:nowrap;
+    opacity:0;
+    visibility:hidden;
+    transition:.35s ease;
+}
+
+.map-pin:hover .pin-dot,
+.map-pin.active .pin-dot{
+    transform:scale(1.4);
+}
+
+.map-pin:hover .pin-dot::after,
+.map-pin.active .pin-dot::after{
+    width:28px;
+    height:28px;
+    background:rgba(101,99,98,.28);
+}
+
+.map-pin:hover .pin-label,
+.map-pin.active .pin-label{
+    opacity:1;
+    visibility:visible;
+    bottom:28px;
+}
+
+/* POINT POSITIONS */
+.china{
+    top:500px;
+    left:375px;
+}
+
+.telangana{
+    top:540px;
+    left:960px;
+}
+
+/* LINE SVG */
+.flight-svg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:3;
+}
+
+.flight-route{
+    fill:none;
+    stroke:#3e3d3b;
+    stroke-width:2;
+    stroke-dasharray:8 8;
+    opacity:.55;
+}
+
+.flight-plane{
+    font-size:45px;
+    fill:#1f1f1f;
+    font-weight:700;
+    dominant-baseline:middle;
+    text-anchor:middle;
+}
+
+/* RESPONSIVE POSITIONS */
+@media(max-width:1200px){
+    .pin-label{
+        font-size:14px;
+    }
+
+    .china{
+        top:360px;
+        left:260px;
+    }
+
+    .telangana{
+        top:385px;
+        left:680px;
+    }
+}
+
+@media(max-width:992px){
+    .pin-dot{
+        width:5px;
+        height:5px;
+    }
+
+    .pin-dot::after{
+        width:14px;
+        height:14px;
+    }
+
+    .pin-label{
+        font-size:10px;
+    }
+
+    .china{
+        top:290px;
+        left:190px;
+    }
+
+    .telangana{
+        top:300px;
+        left:585px;
+    }
+    .map-pin:hover .pin-dot::after,
+.map-pin.active .pin-dot::after{
+    width:12px;
+    height:12px;
+    background:rgba(101,99,98,.28);
+}
+    
+}
+
+@media(max-width:768px){
+    .pin-dot{
+        width:5px;
+        height:5px;
+    }
+
+    .pin-dot::after{
+        width:12px;
+        height:12px;
+    }
+
+    .pin-label{
+        font-size:9px;
+    }
+
+    .china{
+        top:280px;
+        left:200px;
+    }
+
+    .telangana{
+        top:280px;
+        left:503px;
+    }
+}
+
+@media(max-width:480px){
+    .pin-label{
+        font-size:7px;
+    }
+
+    .china{
+        top:145px;
+        left:108px;
+    }
+
+    .telangana{
+        top:155px;
+        left:275px;
+    }
+}
+
+@media(max-width:375px){
+    .pin-dot{
+        width:2px;
+        height:2px;
+    }
+
+    .pin-dot::after{
+        width:4px;
+        height:4px;
+    }
+
+    .pin-label{
+        font-size:5px;
+        top:-13px;
+        letter-spacing:0;
+    }
+
+    .china{
+        top:125px;
+        left:88px;
+    }
+
+    .telangana{
+        top:137px;
+        left:235px;
+    }
+
+    .flight-route{
+        stroke-width:1;
+        stroke-dasharray:3 4;
+        opacity:.5;
+    }
+
+    .flight-plane{
+        font-size:20px;
+    }
+    .map-pin:hover .pin-dot::after,
+.map-pin.active .pin-dot::after{
+    width:8px;
+    height:8px;
+    background:rgba(101,99,98,.28);
+}
+}
+</style>
+
+<div class="container-fluid">
+    <div class="presence-map-wrapper">
+
+        <img src="imgs/map2.png" class="presence-map-img" alt="Presence Map">
+
+        <svg class="flight-svg" id="flightSvg">
+            <path id="flightPath" class="flight-route"></path>
+
+           <text
+    class="flight-plane"
+    dy="1"
+    text-anchor="middle"
+    dominant-baseline="middle"
+>
+                <textPath href="#flightPath" startOffset="0%">
+                    ✈
+                    <animate
+                        attributeName="startOffset"
+                        from="0%"
+                        to="100%"
+                        dur="5s"
+                        repeatCount="indefinite"
+                    />
+                </textPath>
+            </text>
+        </svg>
+
+        <div class="map-pin china" id="chinaPin">
+            <span class="pin-dot"></span>
+            <span class="pin-label">CHINA</span>
+        </div>
+
+        <div class="map-pin telangana" id="telanganaPin">
+            <span class="pin-dot"></span>
+            <span class="pin-label">TELANGANA</span>
+        </div>
+
+    </div>
+</div>
+
+<script>
+const pins = document.querySelectorAll('.map-pin');
+let currentPin = 0;
+
+function autoHighlightPins(){
+    pins.forEach(pin => pin.classList.remove('active'));
+    pins[currentPin].classList.add('active');
+    currentPin = (currentPin + 1) % pins.length;
+}
+
+autoHighlightPins();
+setInterval(autoHighlightPins, 2000);
+
+
+/* POINT TO POINT FLIGHT LINE */
+function drawPointToPointLine(){
+    const wrapper = document.querySelector('.presence-map-wrapper');
+    const svg = document.getElementById('flightSvg');
+    const path = document.getElementById('flightPath');
+    const chinaDot = document.querySelector('#chinaPin .pin-dot');
+    const telanganaDot = document.querySelector('#telanganaPin .pin-dot');
+
+    const wrapperRect = wrapper.getBoundingClientRect();
+    const chinaRect = chinaDot.getBoundingClientRect();
+    const telanganaRect = telanganaDot.getBoundingClientRect();
+
+    const x1 = chinaRect.left - wrapperRect.left + chinaRect.width / 2;
+    const y1 = chinaRect.top - wrapperRect.top + chinaRect.height / 2;
+
+    const x2 = telanganaRect.left - wrapperRect.left + telanganaRect.width / 2;
+    const y2 = telanganaRect.top - wrapperRect.top + telanganaRect.height / 2;
+
+    svg.setAttribute('viewBox', `0 0 ${wrapper.offsetWidth} ${wrapper.offsetHeight}`);
+
+    const midX = (x1 + x2) / 2;
+
+    /* ROUTE HEIGHT FOR DIFFERENT VIEWS */
+    let curveOffset = 100;
+
+    if(window.innerWidth <= 1200){
+        curveOffset = 80;
+    }
+
+    if(window.innerWidth <= 992){
+        curveOffset = 65;
+    }
+
+    if(window.innerWidth <= 768){
+        curveOffset = 45;
+    }
+
+    if(window.innerWidth <= 480){
+        curveOffset = 28;
+    }
+
+   if(window.innerWidth <= 375){
+    curveOffset = 12;
+}
+
+    const curveY = Math.min(y1, y2) - curveOffset;
+
+    path.setAttribute(
+        'd',
+        `M ${x1} ${y1} Q ${midX} ${curveY} ${x2} ${y2}`
+    );
+}
+
+window.addEventListener('load', drawPointToPointLine);
+window.addEventListener('resize', drawPointToPointLine);
+setTimeout(drawPointToPointLine, 300);
 </script>
 
 </section>
@@ -2986,203 +3520,7 @@ setInterval(slideLogos,3000);
 </section>
 
 
-<!--8-->
-<section class="clients-section">
 
-<style>
-.clients-section{
-  padding:80px 0;
-  background:#f5f5f5;
-  overflow:hidden;
-}
-
-.section-title{
-  text-align:center;
-  font-size:60px;
-  font-weight:500;
-  color:#666;
-  margin-bottom:70px;
-}
-
-.slider-wrapper{
-  overflow:hidden;
-  width:100%;
-  position:relative;
-}
-
-.slider-track{
-  display:flex;
-  align-items:center;
-  white-space:nowrap;
-  will-change:transform;
-}
-
-.logo-box{
-  flex:0 0 auto;
-  width:220px;
-  height:180px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin:0 20px;
-}
-
-.logo-box img{
-  max-width:200px;
-  width:100%;
-  height:auto;
-  object-fit:contain;
-  transition:transform .4s ease;
-}
-
-.logo-box:hover img{
-  transform:scale(1.08);
-}
-
-/* Tablet */
-@media(max-width:992px){
-
-  .section-title{
-    font-size:46px;
-  }
-
-  .logo-box{
-    width:170px;
-    height:140px;
-    margin:0 15px;
-  }
-
-  .logo-box img{
-    max-width:150px;
-  }
-}
-
-/* Mobile */
-@media(max-width:768px){
-
-  .clients-section{
-    padding:40px 0;
-  }
-
-  .section-title{
-    font-size:34px;
-    margin-bottom:35px;
-  }
-
-  .logo-box{
-    width:110px;
-    height:90px;
-    margin:0 10px;
-  }
-
-  .logo-box img{
-    max-width:100px;
-  }
-}
-
-/* Small Mobile */
-@media(max-width:480px){
-
-  .section-title{
-    font-size:28px;
-  }
-
-  .logo-box{
-    width:85px;
-    height:70px;
-    margin:0 8px;
-  }
-
-  .logo-box img{
-    max-width:75px;
-  }
-}
-
-@media(max-width:375px){
-.clients-section{
-  padding:10px 0;
- 
-}
-  .section-title{
-    font-size:22px;
-    margin: 0 0 20px;
-  }
-
-  .logo-box{
-    width:70px;
-    height:60px;
-    margin:0 6px;
-  }
-
-  .logo-box img{
-    max-width:60px;
-  }
-}
-</style>
-
-<div class="container-fluid">
-
-<h2 class="section-title">Our Clients</h2>
-
-<div class="slider-wrapper">
-
-<div class="slider-track" id="sliderTrack">
-
-<div class="logo-box"><img src="imgs/partner1-removebg-preview.png" alt=""></div>
-<div class="logo-box"><img src="imgs/partner2-removebg-preview.png" alt=""></div>
-<div class="logo-box"><img src="imgs/partner3-removebg-preview.png" alt=""></div>
-<div class="logo-box"><img src="imgs/partner4-removebg-preview.png" alt=""></div>
-<div class="logo-box"><img src="imgs/partner5-removebg-preview.png" alt=""></div>
-<div class="logo-box"><img src="imgs/partner6-removebg.png" alt=""></div>
-<div class="logo-box"><img src="imgs/partner7-removebg-preview.png" alt=""></div>
-<div class="logo-box"><img src="imgs/partner8-removebg-preview.png" alt=""></div>
-
-</div>
-
-</div>
-</div>
-
-<script>
-const sliderTrack = document.getElementById("sliderTrack");
-
-/* Duplicate logos */
-sliderTrack.innerHTML += sliderTrack.innerHTML;
-
-let scrollAmount = 0;
-let speed = 2;
-
-function slideLogos(){
-
-    scrollAmount += speed;
-
-    if(scrollAmount >= sliderTrack.scrollWidth / 2){
-        scrollAmount = 0;
-    }
-
-    sliderTrack.style.transform =
-      `translateX(-${scrollAmount}px)`;
-
-    requestAnimationFrame(slideLogos);
-}
-
-slideLogos();
-
-/* Pause on hover */
-sliderTrack.addEventListener("mouseenter",()=>{
-    speed = 0;
-});
-
-sliderTrack.addEventListener("mouseleave",()=>{
-    speed = window.innerWidth <= 768 ? 0.5 : 1;
-});
-
-/* Responsive speed */
-window.addEventListener("resize",()=>{
-    speed = window.innerWidth <= 768 ? 0.5 : 1;
-});
-</script>
-
-</section>
 
 
 <!--9-->
@@ -3199,24 +3537,26 @@ window.addEventListener("resize",()=>{
   }
 
   /* WATERMARK */
-  .cs-footer-watermark{
+ .cs-footer-watermark{
     position:absolute;
     top:20px;
     left:50%;
     transform:translateX(-50%);
     width:100%;
     text-align:center;
-    font-size:clamp(90px,18vw,200px);
+
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(120px,18vw,240px);
     font-weight:400;
+
     color:#ebe8df;
-    line-height:0.9;
-    white-space:nowrap;
+    line-height:.9;
+    letter-spacing:-3px;
+
     z-index:1;
     pointer-events:none;
     user-select:none;
-    letter-spacing:-5px;
-    
-  }
+}
 
   /* CONTENT */
   .cs-footer-content{
@@ -3637,6 +3977,48 @@ window.addEventListener("resize",()=>{
 
 
 
+
+
+<!-- 8 -->
+<script>
+const sliderTrack = document.getElementById("sliderTrack");
+
+/* Duplicate logos */
+sliderTrack.innerHTML += sliderTrack.innerHTML;
+
+let scrollAmount = 0;
+let speed = 2;
+
+function slideLogos(){
+
+    scrollAmount += speed;
+
+    if(scrollAmount >= sliderTrack.scrollWidth / 2){
+        scrollAmount = 0;
+    }
+
+    sliderTrack.style.transform =
+      `translateX(-${scrollAmount}px)`;
+
+    requestAnimationFrame(slideLogos);
+}
+
+slideLogos();
+
+/* Pause on hover */
+sliderTrack.addEventListener("mouseenter",()=>{
+    speed = 0;
+});
+
+sliderTrack.addEventListener("mouseleave",()=>{
+    speed = window.innerWidth <= 768 ? 0.5 : 1;
+});
+
+/* Responsive speed */
+window.addEventListener("resize",()=>{
+    speed = window.innerWidth <= 768 ? 0.5 : 1;
+});
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
