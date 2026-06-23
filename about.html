@@ -1171,441 +1171,314 @@ Pricing Depends On Project Scope, Complexity, And Timeline. Custom Quotes Are Pr
 <section class="cs-footer-section">
 
 <style>
-
-  .cs-footer-section{
-    position:relative;
-    background:#f6f5f1;
-    overflow:hidden;
-    padding:220px 50px 45px;
-    border-top:1px solid rgba(0,0,0,0.08);
-  }
-
-  /* WATERMARK */
- .cs-footer-watermark{
-    position:absolute;
-    top:20px;
-    left:50%;
-    transform:translateX(-50%);
-    width:100%;
-    text-align:center;
-
-    font-family:'Cormorant Garamond', serif;
-    font-size:clamp(120px,18vw,240px);
-    font-weight:400;
-
-    color:#ebe8df;
-    line-height:.9;
-    letter-spacing:-3px;
-
-    z-index:1;
-    pointer-events:none;
-    user-select:none;
+.cs-footer-section{
+  position:relative;
+  background:#f6f5f1;
+  overflow:hidden;
+   padding:260px 50px 45px;
+  border-top:1px solid rgba(0,0,0,0.08);
 }
 
-  /* CONTENT */
-  .cs-footer-content{
-    position:relative;
-    z-index:5;
+/* WATERMARK */
+.cs-footer-watermark{
+  position:absolute;
+  top:28px;
+  left:50%;
+  transform:translateX(-50%);
+  width:100%;
+  text-align:center;
+  font-family:'Cormorant Garamond', serif;
+  font-size:clamp(100px,16vw,230px);
+  font-weight:400;
+  color:#ebe8df;
+  line-height:.9;
+  letter-spacing:-3px;
+  z-index:1;
+  pointer-events:none;
+  user-select:none;
+}
+
+/* CONTENT */
+.cs-footer-content{
+  position:relative;
+  z-index:5;
+  margin-top:40px;
+}
+
+/* MAIN LAYOUT */
+.cs-footer-inner{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:40px;
+}
+
+/* LINKS */
+.cs-footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:32px;
+}
+
+.cs-footer-links a{
+  text-decoration:none;
+  color:#2f2f2f;
+  font-size:15px;
+  font-weight:400;
+  position:relative;
+  transition:.3s ease;
+}
+
+.cs-footer-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0;
+  height:1px;
+  background:#cfc8b8;
+  transition:.3s;
+}
+
+.cs-footer-links a:hover{
+  color:#b8b09d;
+}
+
+.cs-footer-links a:hover::after{
+  width:100%;
+}
+
+/* RIGHT SIDE */
+.cs-footer-right{
+  text-align:right;
+}
+
+/* SOCIAL ICONS */
+.cs-social-icons{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:14px;
+  margin-bottom:18px;
+}
+
+.cs-social-icons a{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:#e7e4db;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:#fff;
+  font-size:18px;
+  transition:.35s ease;
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,0.4),
+    0 5px 12px rgba(0,0,0,0.06);
+}
+
+.cs-social-icons a:hover{
+  background:#1f1f1f;
+  transform:translateY(-4px);
+  box-shadow:0 10px 18px rgba(0,0,0,0.15);
+}
+
+/* COPYRIGHT */
+.cs-copyright{
+  font-size:14px;
+  color:#2f2f2f;
+  font-weight:300;
+  margin:0;
+  line-height:1.7;
+}
+
+/* SCROLL BUTTON */
+.cs-scroll-btn{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:55px;
+  height:55px;
+  border:none;
+  border-radius:50%;
+  background:#000;
+  color:#fff;
+  font-size:22px;
+  cursor:pointer;
+  z-index:999;
+  transition:.35s ease;
+  box-shadow:0 6px 20px rgba(0,0,0,0.18);
+}
+
+.cs-scroll-btn:hover{
+  background:#222;
+  transform:translateY(-4px);
+}
+
+@media(min-width:993px){
+  .cs-footer-section{
+    padding-top:240px;
   }
 
-  /* LINKS */
-  .cs-footer-links{
-    display:flex;
-    flex-wrap:wrap;
+  .cs-footer-content{
+    margin-top:10px;
+  }
+}
+
+/* TABLET */
+@media(max-width:992px){
+  .cs-footer-section{
+    padding:135px 28px 38px;
+  }
+
+  .cs-footer-watermark{
+    font-size:120px;
+    top:30px;
+  }
+
+  .cs-footer-inner{
+    flex-direction:column;
     align-items:center;
-    gap:35px;
+    text-align:center;
+    gap:25px;
+  }
+
+  .cs-footer-links{
+    justify-content:center;
+  }
+
+  .cs-footer-right{
+    text-align:center;
+  }
+
+  .cs-social-icons{
+    justify-content:center;
+  }
+}
+
+/* MOBILE */
+@media(max-width:576px){
+  .cs-footer-section{
+    padding:60px 16px 28px;
+  }
+
+  .cs-footer-watermark{
+    font-size:55px;
+    top:30px;
+    letter-spacing:-1px;
+    white-space:nowrap;
+  }
+
+  .cs-footer-inner{
+    gap:20px;
+  }
+
+  .cs-footer-links{
+    flex-direction:column;
+    gap:10px;
   }
 
   .cs-footer-links a{
-    text-decoration:none;
-    color:#2f2f2f;
-    font-size:15px;
-    font-weight:400;
-    transition:0.3s ease;
-    position:relative;
-    top: 120px;
+    font-size:13px;
   }
 
-  .cs-footer-links a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-4px;
-    width:0%;
-    height:1px;
-    background:#cfc8b8;
-    transition:0.3s;
-  }
-
-  .cs-footer-links a:hover{
-    color:#b8b09d;
-  }
-
-  .cs-footer-links a:hover::after{
-    width:100%;
-  }
-
-  /* SOCIAL ICONS */
   .cs-social-icons{
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:14px;
-    margin:24px;
+    gap:10px;
+    margin-bottom:14px;
   }
 
   .cs-social-icons a{
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    background:#e7e4db;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    color:#fff;
-    font-size:18px;
-    transition:all 0.35s ease;
-    box-shadow:
-      inset 0 1px 2px rgba(255,255,255,0.4),
-      0 5px 12px rgba(0,0,0,0.06);
-  }
-
-  .cs-social-icons a:hover{
-    background:#1f1f1f;
-    transform:translateY(-4px);
-    box-shadow:0 10px 18px rgba(0,0,0,0.15);
-  }
-
-  /* COPYRIGHT */
-  .cs-copyright{
-    text-align:right;
+    width:40px;
+    height:40px;
     font-size:14px;
-    color:#2f2f2f;
-    font-weight:300;
-    margin:0;
-    line-height:1.7;
   }
 
-  /* SCROLL BUTTON */
+  .cs-copyright{
+    font-size:12px;
+  }
+
   .cs-scroll-btn{
-    position:fixed;
-    right:22px;
-    bottom:22px;
-    width:55px;
-    height:55px;
-    border:none;
-    border-radius:50%;
-    background:#000;
-    color:#fff;
-    font-size:22px;
-    cursor:pointer;
-    z-index:999;
-    transition:0.35s ease;
-    box-shadow:0 6px 20px rgba(0,0,0,0.18);
+    width:44px;
+    height:44px;
+    font-size:16px;
+    right:16px;
+    bottom:16px;
   }
+}
 
-  .cs-scroll-btn:hover{
-    background:#222;
-    transform:translateY(-4px);
-  }
-
-  /* =======================================
-      LARGE DESKTOP
-  ======================================= */
-
-  @media(min-width:1600px){
-
-    .cs-footer-section{
-      padding:260px 80px 50px;
-    }
-
-    .cs-footer-watermark{
-      font-size:320px;
-    }
-
-    .cs-footer-links a{
-      font-size:17px;
-    }
-  }
-
-  /* =======================================
-      LAPTOP
-  ======================================= */
-
-  @media(max-width:1200px){
-
-    .cs-footer-section{
-      padding:190px 35px 40px;
-    }
-
-    .cs-footer-watermark{
-      font-size:190px;
-    }
-  }
-
-  /* =======================================
-      TABLET
-  ======================================= */
-
-  @media(max-width:992px){
-
-    .cs-footer-section{
-      padding:160px 28px 38px;
-    }
-
-    .cs-footer-watermark{
-      font-size:135px;
-      top:35px;
-      letter-spacing:-3px;
-    }
-
-    .cs-footer-links{
-      justify-content:center;
-      gap:26px;
-      margin-bottom:15px;
-    }
-
-    .cs-social-icons{
-      justify-content:center;
-      margin-bottom:18px;
-    }
-
-    .cs-copyright{
-      text-align:center;
-    }
-  }
-
-  /* =======================================
-      MOBILE LANDSCAPE
-  ======================================= */
-
-  @media(max-width:768px){
-
-    .cs-footer-section{
-      padding:120px 20px 30px;
-    }
-
-    .cs-footer-watermark{
-      font-size:80px;
-      top:42px;
-      line-height:1;
-      letter-spacing:-1px;
-    }
-
-    .cs-footer-links{
-      justify-content:center;
-      text-align:center;
-      gap:18px;
-    }
-
-    .cs-footer-links a{
-      font-size:14px;
-    }
-
-    .cs-social-icons{
-      justify-content:center;
-      gap:12px;
-      margin-bottom:16px;
-    }
-
-    .cs-social-icons a{
-      width:44px;
-      height:44px;
-      font-size:16px;
-    }
-
-    .cs-copyright{
-      text-align:center;
-      font-size:13px;
-    }
-
-    .cs-scroll-btn{
-      width:48px;
-      height:48px;
-      font-size:18px;
-      right:16px;
-      bottom:16px;
-    }
-  }
-
-  /* =======================================
-      SMALL MOBILE
-  ======================================= */
-
-  @media(max-width:576px){
-
-    .cs-footer-section{
-      padding:95px 16px 28px;
-    }
-
-    .cs-footer-watermark{
-      font-size:52px;
-      top:34px;
-      white-space:normal;
-      line-height:1.05;
-    }
-
-    .cs-footer-links{
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      gap:14px;
-      text-align:center;
-    }
-
-    .cs-footer-links a{
-      font-size:13px;
-    }
-
-    .cs-social-icons{
-      justify-content:center;
-      gap:10px;
-      margin-top:8px;
-    }
-
-    .cs-social-icons a{
-      width:40px;
-      height:40px;
-      font-size:14px;
-    }
-
-    .cs-copyright{
-      font-size:12px;
-      text-align:center;
-      margin-top:8px;
-    }
-
-    .cs-scroll-btn{
-      width:44px;
-      height:44px;
-      font-size:16px;
-    }
-  }
-
+/* SMALL MOBILE */
 @media(max-width:375px){
-
-    .cs-footer-section{
-      padding:80px 12px 25px;
-    }
-
-    .cs-footer-watermark{
-      font-size:38px;
-      top:28px;
-      letter-spacing:0;
-    }
-
-    .cs-footer-links a{
-      font-size:12px;
-    }
-
-    .cs-social-icons a{
-      width:36px;
-      height:36px;
-      font-size:12px;
-    }
-
-    .cs-copyright{
-      font-size:11px;
-    }
-
-    .cs-scroll-btn{
-      width:40px;
-      height:40px;
-      font-size:14px;
-    }
+  .cs-footer-section{
+    padding:38px 12px 24px;
   }
+
+  .cs-footer-watermark{
+    font-size:55px;
+    top:26px;
+  }
+
+  .cs-footer-links a{
+    font-size:12px;
+  }
+
+  .cs-social-icons a{
+    width:28px;
+    height:28px;
+    font-size:12px;
+  }
+
+  .cs-copyright{
+    font-size:11px;
+  }
+}
 </style>
 
-  <!-- WATERMARK -->
   <div class="cs-footer-watermark">
     Joy Interio
   </div>
 
-  <div class="container-fluid cs-footer-content">
+  <div class="cs-footer-content">
+    <div class="cs-footer-inner">
 
-    <div class="row align-items-end gy-4">
-
-      <!-- LEFT -->
-      <div class="col-lg-6">
-
-        <div class="cs-footer-links">
-
-          <a href="/blogs">Blogs</a>
-
-          <a href="/careers">Careers</a>
-
-          <a href="/about">About Us</a>
-
-          <a href="tel:+919599197669">
-            Call - +91 0000000000
-          </a>
-
-        </div>
-
+      <div class="cs-footer-links">
+        <a href="/blogs">Blogs</a>
+        <a href="/careers">Careers</a>
+        <a href="/about">About Us</a>
+        <a href="tel:+910000000000">Call - +91 0000000000</a>
       </div>
 
-      <!-- RIGHT -->
-      <div class="col-lg-6">
+      <div class="cs-footer-right">
 
         <div class="cs-social-icons">
-
-          <a href="mailto:sales@chalkstudio.design?subject=Hello" target="_blank">
-            ✉
-          </a>
-
-          <a href="https://www.linkedin.com/company/chalkstudio-design/?originalSubdomain=in" target="_blank">
-            in
-          </a>
-
-          <a href="https://instagram.com/chalkstudio.design?igshid=pvatrq7m4wxm" target="_blank">
-            ◎
-          </a>
-
-          <a href="https://www.facebook.com/chalkstudiodesign/" target="_blank">
-            f
-          </a>
-
-          <a href="https://wa.link/jnn17z" target="_blank">
-            ☏
-          </a>
-
-          <a href="https://maps.app.goo.gl/oCJkH7WPuVefRzbNA" target="_blank">
-            ⌖
-          </a>
-
+          <a href="mailto:sales@joyinterio.com?subject=Hello" target="_blank">✉</a>
+          <a href="#" target="_blank">in</a>
+          <a href="#" target="_blank">◎</a>
+          <a href="#" target="_blank">f</a>
+          <a href="#" target="_blank">☏</a>
+          <a href="#" target="_blank">⌖</a>
         </div>
 
         <p class="cs-copyright">
-         © 2026 Joy Interio. All Rights Reserved. Privacy Policy
+          © 2026 Joy Interio. All Rights Reserved. Privacy Policy
         </p>
 
       </div>
 
     </div>
-
   </div>
 
-  <!-- SCROLL BUTTON -->
-  <button class="cs-scroll-btn" id="csScrollBtn">
-    ↑
-  </button>
+  <button class="cs-scroll-btn" id="csScrollBtn">↑</button>
 
 <script>
-
-  const csScrollButton =
-    document.getElementById("csScrollBtn");
-
-  csScrollButton.addEventListener("click", function(){
-
-    window.scrollTo({
-      top:0,
-      behavior:"smooth"
-    });
-
+document.getElementById("csScrollBtn").addEventListener("click", function(){
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
   });
-
+});
 </script>
 
 </section>
